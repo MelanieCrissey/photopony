@@ -1,0 +1,16 @@
+<h1>Photopony</h1>
+
+<% @images.each do |image| %>
+<div class="post">
+        <div class="image"><%= image_tag(image.image.url(:medium)) %></div>
+        <div class="name"><%= image.name %></div>
+        <%= image.rating %>
+        <div class="feels">
+        	<i class="fa fa-heart"></i>
+        	<i class="fa fa-bolt"></i>
+        	<i class="fa fa-meh-o"></i>
+        	<img class="icon" src="/assets/oi.jpg"/>
+        	<img class="icon" src="/assets/poo.jpg"/>
+        </div>
+</div>
+<% end %>
